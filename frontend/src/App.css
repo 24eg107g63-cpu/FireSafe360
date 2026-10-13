@@ -1,0 +1,285 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #f4f6f8;
+}
+
+.app {
+  min-height: 100vh;
+}
+
+/* Header */
+.header {
+  background: #b71c1c;
+  color: white;
+  padding: 25px 50px;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
+}
+
+.header h1 {
+  font-size: 32px;
+  margin-bottom: 5px;
+}
+
+.header p {
+  font-size: 16px;
+}
+
+/* Dashboard */
+.dashboard {
+  padding: 40px 50px;
+}
+
+.welcome {
+  margin-bottom: 30px;
+}
+
+.welcome h2 {
+  color: #333;
+  font-size: 28px;
+  margin-bottom: 10px;
+}
+
+.welcome p {
+  color: #666;
+  font-size: 16px;
+}
+
+/* Cards */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 25px;
+}
+
+.card {
+  background: white;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  min-height: 190px;
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card h3 {
+  color: #b71c1c;
+  margin-bottom: 15px;
+  font-size: 20px;
+}
+
+.card p {
+  color: #666;
+  margin-bottom: 25px;
+  line-height: 1.5;
+}
+
+.card button {
+  background: #b71c1c;
+  color: white;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.card button:hover {
+  background: #8e0000;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .header {
+    padding: 20px;
+  }
+
+  .dashboard {
+    padding: 25px 20px;
+  }
+
+  .cards {
+    grid-template-columns: 1fr;
+  }
+}
+/* Incident Form */
+
+.incident-form {
+  width: 100%;
+  max-width: 750px;
+  margin: 0 auto;
+  background: white;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.incident-form label {
+  display: block;
+  margin-top: 15px;
+  margin-bottom: 7px;
+  font-weight: bold;
+  color: #333;
+}
+
+.incident-form input,
+.incident-form select,
+.incident-form textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 15px;
+}
+
+.incident-form input:focus,
+.incident-form select:focus,
+.incident-form textarea:focus {
+  outline: none;
+  border-color: #b71c1c;
+}
+
+.submit-button {
+  width: 100%;
+  margin-top: 25px;
+  padding: 13px;
+  background: #b71c1c;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.submit-button:hover {
+  background: #8e0000;
+}
+
+.message {
+  max-width: 650px;
+  margin-top: 20px;
+  padding: 15px;
+  background: #e8f5e9;
+  border-left: 5px solid #2e7d32;
+  border-radius: 5px;
+  color: #1b5e20;
+  font-weight: bold;
+}
+/* Incident List */
+
+.incident-section {
+  margin-top: 45px;
+}
+
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.section-header h2 {
+  color: #333;
+}
+
+.refresh-button {
+  background: #333;
+  color: white;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.refresh-button:hover {
+  background: #555;
+}
+
+.incident-table-container {
+  background: white;
+  border-radius: 10px;
+  overflow-x: auto;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.incident-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.incident-table th,
+.incident-table td {
+  padding: 14px;
+  text-align: left;
+  border-bottom: 1px solid #eee;
+}
+
+.incident-table th {
+  background: #b71c1c;
+  color: white;
+}
+
+.incident-table tr:hover {
+  background: #f9f9f9;
+}
+
+/* Severity */
+
+.severity {
+  padding: 5px 10px;
+  border-radius: 15px;
+  font-weight: bold;
+  font-size: 12px;
+}
+
+.severity.high {
+  background: #ffcdd2;
+  color: #b71c1c;
+}
+
+.severity.medium {
+  background: #fff3cd;
+  color: #856404;
+}
+
+.severity.low {
+  background: #d4edda;
+  color: #155724;
+}
+
+.no-data {
+  background: white;
+  padding: 25px;
+  border-radius: 8px;
+  color: #666;
+}
+.welcome {
+  text-align: center;
+  margin-bottom: 35px;
+}
+
+.incident-form label {
+  text-align: left;
+}
+
+.incident-form input,
+.incident-form select,
+.incident-form textarea {
+  display: block;
+  width: 100%;
+}
